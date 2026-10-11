@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#073b8c">
+<title>Akademi School Enligne | Fòmasyon anliy</title>
+<style>
+:root{--blue:#0645ad;--navy:#061b49;--green:#19c653;--ink:#111827;--muted:#64748b;--line:#e5eaf2}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f5f8fc;line-height:1.5}
+header{background:linear-gradient(120deg,#061b49,#0757c9);color:#fff;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:1.25rem;letter-spacing:.3px}.brand span{color:#39e86e}
+header a{color:white;text-decoration:none;font-weight:700}
+.wrap{max-width:1100px;margin:auto;padding:28px 18px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.hero-card,.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 12px 35px #0b2c5b0d}
+.kicker{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:.8rem}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:12px 0}
+.price{display:inline-block;background:#e9fff0;color:#087c2c;border:1px solid #a9f2bd;padding:9px 15px;border-radius:999px;font-weight:900;font-size:1.15rem;margin:8px 0 15px}
+.btn{display:inline-block;border:0;border-radius:12px;padding:13px 18px;font-weight:850;cursor:pointer;text-decoration:none;text-align:center}
+.btn-primary{background:var(--blue);color:white}.btn-green{background:var(--green);color:#03220e}.btn-light{background:#eef4ff;color:var(--blue)}
+.flyer{width:100%;max-height:570px;object-fit:contain;border-radius:14px;background:#eef2f7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.feature{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;font-weight:800}
+section{margin-top:26px}.section-title{font-size:1.65rem;margin:0 0 12px}
+form{display:grid;gap:13px}label{font-weight:800;font-size:.92rem}input,select{width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:white}
+.payment-box{border:1px dashed #9bb4db;background:#f6f9ff;border-radius:14px;padding:15px;margin:5px 0}
+.small{font-size:.9rem;color:var(--muted)}.notice{background:#fff7df;border:1px solid #f5d77b;border-radius:12px;padding:13px;font-size:.9rem}
+.hidden{display:none!important}.status{padding:10px;border-radius:10px;background:#fff7df;color:#805400;font-weight:800}
+.admin-list{overflow:auto}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);font-size:.9rem}footer{text-align:center;color:var(--muted);padding:30px 15px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.wrap{padding:18px 13px}.hero-card,.panel{padding:19px}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand">AKADEMI <span>SCHOOL ENLIGNE</span></div><a href="#inscription">Enskri kounye a →</a></header>
+<main class="wrap">
+<div class="hero">
+  <div class="hero-card">
+    <div class="kicker">INSCRIPTIONS OUVERTES</div>
+    <h1>Apprenez de nouvelles compétences <span style="color:var(--blue)">en ligne.</span></h1>
+    <p>Des formations pratiques pour apprendre à créer du contenu et des supports numériques, sur téléphone ou ordinateur.</p>
+    <div class="price">Prix de la formation : 500 HTG</div><br>
+    <a class="btn btn-primary" href="#inscription">S’INSCRIRE MAINTENANT</a>
+    <div class="small" style="margin-top:12px">L’accès au groupe apparaît uniquement après vérification du paiement.</div>
+  </div>
+  <div class="hero-card">
+    Nos formations
+    <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:12px">
+      <div class="feature">🎨 Design graphique</div><div class="feature">📱 TikTok et création de contenu</div>
+      <div class="feature">🎬 Vidéos lyrics</div><div class="feature">✂️ Montage vidéo</div>
+      <div class="feature">🖼️ Flyers publicitaires</div><div class="feature">✨ Création de logos</div>
+      <div class="feature" style="grid-column:1/-1">💳 Création de compte PayPal, selon les conditions et disponibilités du service</div>
+    </div>
+  </div>
+</div>
+
+<section class="hero" id="inscription">
+ <div class="panel">
+  <h2 class="section-title">Formulaire d’inscription</h2>
+  <p class="small">Remplissez vos informations et choisissez votre moyen de paiement.</p>
+  <form id="signupForm">
+   <div><label for="fullname">Nom complet</label><input id="fullname" name="fullname" required maxlength="100" placeholder="Saisissez votre nom"></div>
+   <div><label for="whatsapp">Numéro WhatsApp</label><input id="whatsapp" name="whatsapp" required maxlength="25" placeholder="Egzanp: +509 ..."></div>
+   <div><label for="payment">Moyen de paiement peman</label><select id="payment" name="payment" required><option value="">Chwazi metòd la</option><option value="MonCash">MonCash</option><option value="NatCash">NatCash</option></select></div>
+   <div class="payment-box" id="paymentDetails">Choisissez MonCash ou NatCash pour afficher les détails du paiement.</div>
+   <button class="btn btn-primary" type="submit">Envoyer mon inscription</button>
+  </form>
+  <div id="signupResult" class="hidden" style="margin-top:15px"></div>
+ </div>
+ <div class="panel">
+  <h2 class="section-title">Comment obtenir l’accès ?</h2>
+  <ol><li>Remplissez le formulaire.</li><li>Envoyez 500 HTG via le moyen de paiement choisi.</li><li>Conservez la preuve de transaction.</li><li>L’administrateur vérifie le paiement.</li><li>Après validation, le lien du groupe sera disponible.</li></ol>
+  <div class="notice"><strong>Important :</strong> Cette version de démonstration ne vérifie pas automatiquement les transactions MonCash/NatCash. L’accès WhatsApp ne doit pas être accordé sur la seule déclaration d’un paiement.</div>
+ </div>
+</section>
+
+<section class="panel" id="admin">
+ <h2 class="section-title">Espace administrateur (démonstration)</h2>
+ <p class="small">Dans cette démonstration, les inscriptions sont enregistrées uniquement dans ce navigateur. Il ne s’agit pas encore d’une base de données sécurisée en ligne.</p>
+ <form id="adminLogin" style="max-width:420px">
+  <label for="adminPass">Code administrateur de démonstration</label><input id="adminPass" type="password" placeholder="Saisissez le code de démonstration">
+  <button class="btn btn-light" type="submit">Ouvrir le panneau</button>
+ </form>
+ <div id="adminArea" class="hidden">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between"><strong>Inscriptions</strong><button id="exportCsv" class="btn btn-light" type="button">Exporter en CSV</button></div>
+  <div class="admin-list"><table><thead><tr><th>Nom</th><th>WhatsApp</th><th>Peman</th><th>Statut</th><th>Action</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <p class="small">Code de démonstration : RiveProDemo2026 — changez-le avant toute démonstration publique. Ce code n’offre pas une véritable sécurité en ligne.</p>
+ </div>
+</section>
+</main>
+<footer>© <span id="year"></span> Akademi School Enligne · Fòmasyon anliy</footer>
+<script>
+const WHATSAPP_GROUP = "https://chat.whatsapp.com/FiJ9sZDlXyDAPYCidlBi2v?mode=gi_t";
+const PAYMENTS = {MonCash:"44011437", NatCash:"43633428"};
+const ADMIN_DEMO_PASSWORD = "RiveProDemo2026";
+const key = "riveProEnrollmentsDemo";
+document.getElementById("year").textContent = new Date().getFullYear();
+const paymentSelect = document.getElementById("payment");
+paymentSelect.addEventListener("change", () => {
+ const p = paymentSelect.value;
+ document.getElementById("paymentDetails").innerHTML = p
+  ? `<strong>${p}</strong><br>Envoyez <strong>500 HTG</strong> sou nimewo <strong>${PAYMENTS[p]}</strong>.<br><span class="small">Indiquez le nom de la formation dans la note si le service le permet. Conservez le numéro de transaction.</span>`
+  : "Choisissez MonCash ou NatCash pour afficher les détails du paiement.";
+});
+function getEntries(){try{return JSON.parse(localStorage.getItem(key)||"[]")}catch(e){return []}}
+function saveEntries(a){localStorage.setItem(key,JSON.stringify(a))}
+document.getElementById("signupForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const entry={id:Date.now().toString(36),name:document.getElementById("fullname").value.trim(),phone:document.getElementById("whatsapp").value.trim(),payment:paymentSelect.value,status:"An atant verifikasyon",created:new Date().toISOString()};
+ if(!entry.name||!entry.phone||!entry.payment)return;
+ const entries=getEntries();entries.push(entry);saveEntries(entries);
+ const result=document.getElementById("signupResult");result.classList.remove("hidden");
+ result.innerHTML=`<div class="status">Votre inscription est enregistrée sur cet appareil. Le paiement n’est pas encore vérifié.</div><p>Veuillez envoyer 500 HTG via ${entry.payment}: <strong>${PAYMENTS[entry.payment]}</strong>. Conservez la preuve de paiement pour que l’administrateur puisse la vérifier.</p><a class="btn btn-green" href="https://wa.me/50944011437?text=${encodeURIComponent("Bonjou, mwen fè enskripsyon pou Akademi School Enligne. Nom: "+entry.name+". Numéro WhatsApp: "+entry.phone+". Moyen de paiement peman: "+entry.payment+". Tanpri ede m verifye peman mwen.")}" target="_blank" rel="noopener">Envoyez enfòmasyon bay administratè a sou WhatsApp</a><p class="small">Le lien du groupe n’est pas activé dans cette démonstration. L’accès doit être accordé uniquement après vérification réelle.</p>`;
+ e.target.reset();document.getElementById("paymentDetails").textContent="Choisissez MonCash ou NatCash pour afficher les détails du paiement.";
+});
+document.getElementById("adminLogin").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(document.getElementById("adminPass").value!==ADMIN_DEMO_PASSWORD){alert("Code incorrect.");return}
+ document.getElementById("adminArea").classList.remove("hidden");renderRows();
+});
+function renderRows(){
+ const tbody=document.getElementById("rows");tbody.replaceChildren();
+ getEntries().forEach(en=>{
+  const tr=document.createElement("tr");
+  [en.name,en.phone,en.payment,en.status].forEach(v=>{const td=document.createElement("td");td.textContent=v;tr.appendChild(td)});
+  const td=document.createElement("td");
+  if(en.status!=="Payé - vérifié"){
+   const b=document.createElement("button");b.className="btn btn-green";b.textContent="Marquer comme payé";b.onclick=()=>{
+    if(confirm("Confirmez-vous avoir vérifié la transaction dans le système de paiement ?")){
+     const a=getEntries();const x=a.find(z=>z.id===en.id);if(x)x.status="Payé - vérifié";saveEntries(a);renderRows();
+    }
+   };td.appendChild(b);
+  }else{
+   const a=document.createElement("a");a.href=WHATSAPP_GROUP;a.target="_blank";a.rel="noopener";a.className="btn btn-green";a.textContent="Lyen gwoup (admin)";td.appendChild(a);
+  }
+  tr.appendChild(td);tbody.appendChild(tr);
+ });
+}
+document.getElementById("exportCsv").addEventListener("click",()=>{
+ const data=getEntries();const esc=s=>'"'+String(s||"").replace(/"/g,'""')+'"';
+ const csv=[["Nom","WhatsApp","Moyen de paiement","Statut","Dat"],...data.map(x=>[x.name,x.phone,x.payment,x.status,x.created])].map(r=>r.map(esc).join(",")).join("\n");
+ const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8;"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="rive-pro-inscriptions.csv";a.click();URL.revokeObjectURL(url);
+});
+</script>
+</body></html>
